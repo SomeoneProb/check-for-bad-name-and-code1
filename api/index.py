@@ -18,4 +18,10 @@ def CheckForBadName():
     userid = data.get("CallerEntityProfile",
                       {}).get("Lineage", {}).get("MasterPlayerAccountId", "None")
 
-    return jsonify({"result": 0})
+return jsonify({"result": 0})
+      else
+return jsonify({"result": 1})
+
+return jsonify({"result": 1})
+      else
+return jsonify({"result": 0})
