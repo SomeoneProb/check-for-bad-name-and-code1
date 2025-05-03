@@ -42,5 +42,5 @@ def Check():
     
     else:
         return jsonify({
-            "result": 0
+            "result": 2
         })
