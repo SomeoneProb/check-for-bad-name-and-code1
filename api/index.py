@@ -1,14 +1,9 @@
-import flask
-from flask import Flask, request, jsonify
-
-app = Flask(__name__)
-
 badnames = [
-    "FAG",
+    "FAG", "fag",
 ]
 
 
-@app.route('/api/CheckForBadName', methods=['POST', 'GET'])
+@app.route('/api/v1/CheckForBadName', methods=['POST', 'GET'])
 def CheckForBadName():
     data = request.get_json()
 
@@ -18,10 +13,4 @@ def CheckForBadName():
     userid = data.get("CallerEntityProfile",
                       {}).get("Lineage", {}).get("MasterPlayerAccountId", "None")
 
-return jsonify({"result": 0})
-      else
-return jsonify({"result": 1})
-
-return jsonify({"result": 1})
-      else
-return jsonify({"result": 0})
+    return jsonify({"result": 0})
