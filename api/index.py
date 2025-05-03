@@ -37,10 +37,10 @@ def Check():
 
     if name in badNames:
         return jsonify({
-            "result": 1
+            "result": 0
         }), 200
     
     else:
         return jsonify({
-            "result": 0
+            "result": 2
         })
