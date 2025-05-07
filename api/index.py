@@ -6,9 +6,8 @@ app = flask(__name__)
 
 @app.route("/api/v1/CheckForBadName", methods=["POST"])
 def check_for_bad_name():
-    rjson = request.get+json().get("FunctionResult")
+    rjson = request.get_json().get("FunctionResult")
     name = rjson.get("name").upper()
-
 
     if name in ["KKK", "PENIS", "NIGG", "NEG", "NIGA", "MONKEYSLAVE", "SLAVE", "FAG", 
         "NAGGI", "TRANNY", "QUEER", "KYS", "DICK", "PUSSY", "VAGINA", "BIGBLACKCOCK", 
