@@ -1,16 +1,14 @@
 import requests
 import random
-from flask import Flask, jsonify, request
-import logging
-import json
+from flask import flask, jsonify, request
 
-app = Flask(__name__)
-
+app = flask(__name__)
 
 @app.route("/api/v1/CheckForBadName", methods=["POST"])
 def check_for_bad_name():
-    rjson = request.get_json().get("FunctionResult")
+    rjson = request.get+json().get("FunctionResult")
     name = rjson.get("name").upper()
+
 
     if name in ["KKK", "PENIS", "NIGG", "NEG", "NIGA", "MONKEYSLAVE", "SLAVE", "FAG", 
         "NAGGI", "TRANNY", "QUEER", "KYS", "DICK", "PUSSY", "VAGINA", "BIGBLACKCOCK", 
@@ -20,6 +18,7 @@ def check_for_bad_name():
         "REEL", "NII", "@here", "!", " ", "JMAN", "PPPTIG", "CLEANINGBOT", "JANITOR", "K9", 
         "FAGGOT",
         "H4PKY", "MOSA", "NIGGER", "NIGGA", "IHATENIGGERS", "@everyone", "TTT"]:
-        return jsonify({"result": 2})
+        return jsonify({"result:" 2})
     else:
-        return jsonify({"result": 0})
+        return jsonify({"result:" 0})
+    
