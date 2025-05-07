@@ -17,7 +17,7 @@ def check_for_bad_name():
         "REEL", "NII", "@here", "!", " ", "JMAN", "PPPTIG", "CLEANINGBOT", "JANITOR", "K9", 
         "FAGGOT",
         "H4PKY", "MOSA", "NIGGER", "NIGGA", "IHATENIGGERS", "@everyone", "TTT"]:
-        return jsonify({"result:" 2})
+        return jsonify({"result": 2})
     else:
-        return jsonify({"result:" 0})
+        return jsonify({"result": 0})
     
