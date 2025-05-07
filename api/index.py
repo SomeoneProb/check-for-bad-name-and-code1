@@ -4,7 +4,7 @@ from flask import Flask, jsonify, request
 import logging
 import json
 
-app = flask(__name__)
+app = Flask(__name__)
 
 @app.route("/api/v1/CheckForBadName", methods=["POST"])
 def check_for_bad_name():
